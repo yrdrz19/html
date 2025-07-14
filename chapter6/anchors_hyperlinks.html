@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+<a href="http://example.com/">Link</a>
+
+<!-- If you gave an id attribute to your topics, you could then link to them -->
+<h2 id="Topic1">First topic</h2>
+<p>Content about the first topic</p>
+<h2 id="Topic2">Second topic</h2>
+<p>Content about the second topic</p>
+<!-- Now you can use the anchor in your table of contents: -->
+<h1>Table of Contents</h1>
+<a href='#Topic1'>Click to jump to the First Topic</a>
+<a href='#Topic2'>Click to jump to the Second Topic</a>
+
+<!-- Open link in new tab/window-->
+<a href="example.com" target="_blank">Text Here</a>
+
+<!--
+SECURITY VULNERABILITY WARNING!
+Using target="_blank" gives the opening site partial access to the window.opener object via JavaScript,
+which allows that page to then access and change the window.opener.location of your page and
+potentially redirect users to malware or phishing sites.
+Whenever using this for pages you do not control, add rel="noopener" to your link to prevent the
+window.opener object from being sent with the request.
+Currently, Firefox does not support noopener, so you will need to use rel="noopener noreferrer" for
+maximum eﬀect.
+
+-->
+</body>
+</html>
